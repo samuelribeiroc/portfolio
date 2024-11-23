@@ -2,9 +2,15 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { IconType } from "react-icons";
 import {
-  SiCss3, SiHtml5, SiJavascript, SiNextdotjs,
-  SiReact, SiTypescript
+  SiAdobephotoshop,
+  SiCss3, SiCypress, SiDocker, SiFastify, SiFigma, SiHtml5, SiJavascript, SiJest, SiJunit5, SiMongodb, SiMysql, SiNestjs, SiNextdotjs,
+  SiNodedotjs,
+  SiPandas,
+  SiPrisma,
+  SiPython,
+  SiReact, SiSpring, SiTypescript, 
 } from "react-icons/si";
+import { FaAws, FaJava } from "react-icons/fa";
 
 interface ArrayProps {
   Icon: IconType;
@@ -22,7 +28,6 @@ interface MarqueeProps {
   className?: string;
   reverse?: boolean;
   pauseOnHover?: boolean;
-  children?: React.ReactNode;
   vertical?: boolean;
   repeat?: number;
   [key: string]: any;
@@ -32,7 +37,6 @@ export default function Marquee({
   className,
   reverse,
   pauseOnHover = false,
-  children,
   vertical = false,
   repeat = 4,
   ...props
@@ -40,17 +44,34 @@ export default function Marquee({
   const techs = [
     { Icon: SiTypescript, name: 'Typescript' },
     { Icon: SiNextdotjs, name: 'Next.js' },
+    { Icon: SiNestjs, name: 'Nest.js' },
+    { Icon: SiFastify, name: 'Fastify' },
     { Icon: SiReact, name: 'React' },
+    { Icon: SiNodedotjs, name: 'Node.js' },
     { Icon: SiJavascript, name: 'JavaScript' },
     { Icon: SiCss3, name: 'CSS3' },
     { Icon: SiHtml5, name: 'HTML5' },
+    { Icon: SiFigma, name: 'Figma' },
+    { Icon: SiAdobephotoshop, name: 'Photoshop' },
+    { Icon: FaJava, name: 'Java' },
+    { Icon: SiSpring, name: 'Spring' },
+    { Icon: SiPython, name: 'Python' },
+    { Icon: SiPandas, name: 'Pandas' },
+    { Icon: SiMysql, name: 'MySQL' },
+    { Icon: SiMongodb, name: 'MongoDB' },
+    { Icon: SiCypress, name: 'Cypress' },
+    { Icon: SiJest, name: 'Jest' },
+    { Icon: SiJunit5, name: 'Junit 5' },
+    { Icon: FaAws, name: 'AWS' },
+    { Icon: SiDocker, name: 'Docker' },
+    { Icon: SiPrisma, name: 'Prisma' },
   ]
 
   return (
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden p-3 [--duration:40s] [--gap:1rem] [gap:var(--gap)] bg-violet-600 z-10 w-full",
+        "group flex overflow-hidden p-3 [--duration:40s] [--gap:1rem] [gap:var(--gap)] bg-indigo-600 z-10 w-full",
         {
           "flex-row": !vertical,
           "flex-col": vertical,
