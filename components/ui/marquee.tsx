@@ -8,7 +8,7 @@ import {
   SiPandas,
   SiPrisma,
   SiPython,
-  SiReact, SiSpring, SiTypescript, 
+  SiReact, SiSpring, SiStyledcomponents, SiTailwindcss, SiTypescript, 
 } from "react-icons/si";
 import { FaAws, FaJava } from "react-icons/fa";
 
@@ -20,7 +20,7 @@ interface ArrayProps {
 const TechIcon: React.FC<ArrayProps> = ({ Icon, name }) => (
   <div className="flex items-center m-2 transition-transform">
     <Icon className="w-4 h-4 text-neutral-50" />
-    <span className="ml-2 text-sm font-medium">{name}</span>
+    <span className="ml-2 text-sm font-medium hover:cursor-default">{name}</span>
   </div>
 )
 
@@ -51,6 +51,8 @@ export default function Marquee({
     { Icon: SiJavascript, name: 'JavaScript' },
     { Icon: SiCss3, name: 'CSS3' },
     { Icon: SiHtml5, name: 'HTML5' },
+    { Icon: SiTailwindcss, name: 'Tailwind' },
+    { Icon: SiStyledcomponents, name: 'Styled-Components' },
     { Icon: SiFigma, name: 'Figma' },
     { Icon: SiAdobephotoshop, name: 'Photoshop' },
     { Icon: FaJava, name: 'Java' },
