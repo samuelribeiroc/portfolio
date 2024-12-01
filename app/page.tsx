@@ -5,7 +5,7 @@ import DotPattern from "@/components/ui/dot-pattern";
 import Marquee from "@/components/ui/marquee";
 import Introduce from "@/components/sections/home/introduce";
 import Experiences from "@/components/sections/home/experiences";
-import Projects from "@/components/sections/home/Projects";
+import Projects from "@/components/sections/home/projects";
 
 export default function Home() {
   return (

@@ -1,9 +1,16 @@
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import { BentoGrid } from "@/components/ui/bento-grid";
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader } from "@/components/ui/card";
 import RetroGrid from "@/components/ui/retro-grid";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
-import { SiTypescript } from "react-icons/si";
+import Image from 'next/image';
+import portfolio from "../../public/assets/images/portfolio.png";
+
+import CardLanguages from "@/components/sections/profile/cardLanguages";
+import CardContact from "@/components/sections/profile/cardContact";
+import CardEducation from "@/components/sections/profile/cardEducation";
+import CardCertifications from "@/components/sections/profile/cardCertifications";
 
 export default function Profile() {
   return (
@@ -29,51 +36,25 @@ export default function Profile() {
 
       <div className="w-svw min-h-svh flex flex-col justify-center items-center p-24 z-10">
         <BentoGrid>
-          <BentoCard
-            name={"Perfil"}
-            className={"col-span-1"}
-            background={"bg-neutral-50"}
-            Icon={SiTypescript}
-            description={""}
-            href={""}
-            cta={""}
-          />
-          <BentoCard
-            name={"Perfil"}
-            className={"col-span-2 bg-indigo-800/10"}
-            background={""}
-            Icon={SiTypescript}
-            description={"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
-            href={""}
-            cta={""}
-          />
-          <BentoCard
-            name={"Perfil"}
-            className={"col-span-3 bg-neutral-800/10"}
-            background={""}
-            Icon={SiTypescript}
-            description={"aaaaaaaaaaaaa"}
-            href={""}
-            cta={""}
-          />
-          <BentoCard
-            name={"Perfil"}
-            className={"col-span-2 bg-neutral-800/10"}
-            background={""}
-            Icon={SiTypescript}
-            description={"sssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
-            href={""}
-            cta={""}
-          />
-          <BentoCard
-            name={"Perfil"}
-            className={"col-span-1 bg-indigo-800/10"}
-            background={""}
-            Icon={SiTypescript}
-            description={"asasassa"}
-            href={""}
-            cta={""}
-          />
+          <Card className="flex col-span-1 bg-neutral-50 border-none shadow-lg">
+            <CardHeader className="">
+              <Image
+                width={150}
+                height={150}
+                alt="profile picture"
+                src={portfolio}
+                className="rounded-full"
+              />
+            </CardHeader>
+          </Card>
+
+          <CardEducation />
+
+          <CardCertifications />
+
+          <CardLanguages />
+
+          <CardContact />
         </BentoGrid>
       </div>
     </div>

@@ -87,7 +87,10 @@ const config: Config = {
   					transform: 'translateY(calc(-100% - var(--gap)))'
   				}
   			}
-  		}
+  		},
+			fontFamily: {
+        sans: ['var(--font-geist-sans)'],
+      },
   	}
   },
   plugins: [animatePlugin],
