@@ -30,7 +30,7 @@ function Experience({title, place, firstMonth,
   secondMonth, regime, children, description,
   link, declaration}: ExperienceProps) {
   return (
-    <div className="mb-6 flex flex-col">
+    <div className="mb-8 flex flex-col">
       <h1 className="text-neutral-950 text-2xl font-semibold">
         {title}
       </h1>
@@ -171,6 +171,8 @@ export default function Experiences() {
                 <Badge>Pandas</Badge>
                 <Badge>Sklearn</Badge>
                 <Badge>Jupyter notebook</Badge>
+                <Badge>SCRUM</Badge>
+                <Badge>Github</Badge>
               </Experience>
 
               <Experience
@@ -179,12 +181,16 @@ export default function Experiences() {
                 firstMonth="Outubro"
                 secondMonth="Dezembro"
                 regime="Meio período"
-                description="aaa"
+                description="Nesta capacitação pude estudar sobre testes manuais e automatizados e pude
+                aplicar esses estudos em um projeto real já em desenvolvimento pelo Laboratório VIRTUS."
+                declaration={portfolio}
               >
                 <Badge>Testes automatizados</Badge>
                 <Badge>Javascript</Badge>
                 <Badge>Node.js</Badge>
                 <Badge>Cypress</Badge>
+                <Badge>SCRUM</Badge>
+                <Badge>Github</Badge>
               </Experience>
             </Card>
           </TabsContent>
