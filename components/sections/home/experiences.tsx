@@ -1,88 +1,12 @@
-import Image from 'next/image';
-
 //components ui
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-//icons
-import { FaRegCalendarAlt } from "react-icons/fa";
+import { Experience } from "@/components/templates/experience";
 
 //certifications
 import portfolio from "../../../public/assets/certificates/course-certificates-SCRUMstudy_Samuel_Ribeiro_Costa.png";
-
-interface ExperienceProps {
-  title: string;
-  place: string;
-  firstMonth: string;
-  secondMonth: string;
-  regime: string;
-  children: React.ReactNode;
-  description: string;
-  link?: string;
-  declaration?: any;
-}
-
-function Experience({title, place, firstMonth,
-  secondMonth, regime, children, description,
-  link, declaration}: ExperienceProps) {
-  return (
-    <div className="mb-8 flex flex-col">
-      <h1 className="text-neutral-950 text-2xl font-semibold">
-        {title}
-      </h1>
-
-      <h2 className="text-indigo-600 font-semibold">
-        {place}
-      </h2>
-
-      <div className="h-6 flex gap-1 text-indigo-600 items-center uppercase text-sm">
-        <FaRegCalendarAlt className="w-4 h-4" />
-        {firstMonth} - {secondMonth}
-        <Separator orientation="vertical" className="mx-2" />
-        {regime}
-      </div>
-
-      <div className="flex flex-wrap gap-2 mt-2">
-        {children}
-      </div>
-              
-      <span className="my-4 font-light">
-        {description}
-      </span>
-
-      {link &&
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-fit"
-        >
-          <Button>Acessar</Button>
-        </a>
-      }
-
-      {declaration &&
-        <Dialog>
-          <DialogTrigger className="w-fit">
-            <Button>Ver declaração</Button>
-          </DialogTrigger>
-          <DialogContent>
-            <Image
-              width="2000"
-              height="2000"
-              src={declaration}
-              alt="declaração de participação de projeto"
-            />
-          </DialogContent>
-        </Dialog>
-      }
-    </div>
-  )
-}
 
 export default function Experiences() {
   return (
@@ -123,7 +47,7 @@ export default function Experiences() {
           </TabsList>
 
           <TabsContent value="2021" className="w-full">
-            <Card className="h-[800px] p-6 ml-4 border-indigo-100">
+            <Card className="h-[800px] ml-4 border-none">
               <Experience
                 title="Fullstack trainee"
                 place="Laboratório de Engenharia de Pavimentos (LEP) - Universidade Federal de Campina Grande (Remoto)"
