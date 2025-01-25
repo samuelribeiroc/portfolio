@@ -47,7 +47,7 @@ export default function Experiences() {
           </TabsList>
 
           <TabsContent value="2021" className="w-full">
-            <Card className="h-[800px] ml-4 border-none">
+            <Card className="min-h-[800px] h-fit ml-4 border-none">
               <Experience
                 title="Fullstack trainee"
                 place="Laboratório de Engenharia de Pavimentos (LEP) - Universidade Federal de Campina Grande (Remoto)"
@@ -120,7 +120,7 @@ export default function Experiences() {
           </TabsContent>
 
           <TabsContent value="2022" className="w-full">
-            <Card className="h-[650px] p-6 ml-4 border-indigo-200">
+            <Card className="min-h-[800px] h-fit ml-4 border-none">
               <Experience
                 title="Desenvolvedor fullstack"
                 place="Laboratório de Engenharia de Pavimentos (LEP) - Universidade Federal de Campina Grande (Remoto)"
@@ -163,7 +163,7 @@ export default function Experiences() {
           </TabsContent>
 
           <TabsContent value="2023" className="w-full">
-            <Card className="h-[650px] p-6 ml-4 border-indigo-200">
+            <Card className="min-h-[800px] h-fit ml-4 border-none">
               <Experience
                 title="Desenvolvedor fullstack"
                 place="Laboratório de Engenharia de Pavimentos (LEP) - Universidade Federal de Campina Grande (Remoto)"
@@ -206,7 +206,7 @@ export default function Experiences() {
           </TabsContent>
 
           <TabsContent value="2024" className="w-full">
-            <Card className="h-[650px] p-6 ml-4 border-indigo-200">
+            <Card className="min-h-[800px] h-fit ml-4 border-none">
               <Experience
                 title="Engenheiro de Software"
                 place="ServeSoft"
