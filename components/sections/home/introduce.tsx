@@ -26,8 +26,7 @@ export default function Introduce() {
 
       <div className="h-[440px] w-[470px] relative">
         <Image
-          width={420}
-          height={420}
+          width={450}
           alt="profile picture"
           src={eupng}
           className="absolute bottom-0 justify-center z-[7]"
